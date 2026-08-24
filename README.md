@@ -92,4 +92,11 @@ https://udify.app/chat/Cy3T3G4MDHNjCtFK
 4. Connected it to an LLM node (Llama 3.1 8b instant)
 5. Added strict system instructions to stay grounded in the retrieved context and refuse out-of-scope questions
 6. Tested with a mix of in-scope and out-of-scope questions
-7. Published the app 
+7. Published the app
+
+### Team
+- Ochu Mariam (lead)
+- Verse Vitalis
+- Obidah Abalis
+- Aminu Saminu
+- 
