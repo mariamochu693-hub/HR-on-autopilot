@@ -1,99 +1,95 @@
-HR on Autopilot: An AI-Powered HR Policy Chatbot
-📌 Project Overview
+# HR on Autopilot 🚀
+**An AI-Powered HR Company Policy Chatbot**
 
-HR on Autopilot is an AI-powered HR Policy Chatbot designed to help employees quickly find information from an HR policy handbook.
+Employees waste hours hunting through long HR policy documents. Generic AI tools often hallucinate or give outdated answers.  
 
-The chatbot uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from the HR policy knowledge base and provide responses grounded in the available policy document.
+**HR on Autopilot** solves this with a Retrieval-Augmented Generation (RAG) chatbot that answers only from the official HR policy handbook — accurate, grounded, and instant.
 
-🎯 Problem Statement
+### 🎯 Problem
+- Staff spend too much time searching policy PDFs
+- ChatGPT-style tools invent answers that aren’t in the handbook
+- HR teams get flooded with repetitive questions
 
-Employees often spend significant time searching through lengthy HR policy documents to find specific information.
+### 💡 Solution
+A Dify-powered chatbot that:
+1. Takes a natural language question
+2. Retrieves the relevant sections from the HR policy knowledge base
+3. Generates a clear, grounded answer using an LLM
+4. Refuses questions that fall outside the policy documents
 
-Generic AI tools may also provide inaccurate or unsupported answers when responding to policy-related questions.
+---
 
-This project addresses the problem by providing an AI chatbot that retrieves information from a designated HR policy knowledge base before generating a response.
+### ⚙️ Tech Stack
+- **Platform**: Dify
+- **Architecture**: Retrieval-Augmented Generation (RAG)
+- **LLM**: Llama 3.1 8b instant
+- **Knowledge Base**: HR Policy Handbook (PDF)
+- **Deployment**: Dify Cloud (Udify)
 
-💡 Proposed Solution
-
-The HR Policy Chatbot allows users to ask HR-related questions in natural language.
-
-The system:
-
-Receives the user's question.
-Searches the HR policy knowledge base for relevant information.
-Retrieves the appropriate policy context.
-Uses an LLM to generate a response based on the retrieved information.
-Provides the response to the user.
-⚙️ Technologies Used
-1. Dify
-2. Retrieval-Augmented Generation (RAG)
-3. Large Language Model (LLM)
-4. HR Policy Handbook
-5. GPT OSS 20B
-   
-🔄 How It Works
+### 🔄 How It Works
 User Question
 ↓
-HR Policy Chatbot
+Knowledge Retrieval (from HR Policy PDF)
 ↓
-Knowledge Base Retrieval
+Relevant Policy Chunks
 ↓
-Relevant Policy Information
+LLM (grounded generation)
 ↓
-LLM Processing
-↓
-Grounded Response
+Accurate, Policy-Based Answer
 
-🧠 Methodology
+---
 
-The project uses a RAG-based approach.
+### Architecture
+[User] → [Dify Chatflow]
+├── Knowledge Retrieval Node (Bridge Policy.pdf)
+├── LLM Node (Llama 3.1 8b instant)
+└── Response
+---
 
-Instead of relying solely on the language model's general knowledge, the chatbot retrieves relevant information from the HR policy knowledge base and uses that information to generate its response.
+### 💬 Example Interactions
 
-This helps keep responses aligned with the available HR policy documentation.
+**In-Scope**  
+**User**: What is the maternity leave policy?  
+**Bot**: According to the HR Policy Handbook, eligible employees are entitled to [16] weeks of maternity leave... (grounded answer)
 
-🧪 Example Use Cases
-In-Scope Question
+**Out-of-Scope**  
+**User**: Who is the president of Nigeria?  
+**Bot**: I couldn't answer that question. I answers based on the company’s HR policy documents only.
 
-Example:
-"What is the maternity leave policy?"
+---
 
-The chatbot searches the HR policy knowledge base and provides information based on the available policy documentation.
-
-Out-of-Scope Question
-
-Example:
-"Who won the FIFA World Cup?"
-
-This question is unrelated to the HR policy knowledge base and should not be answered as an HR policy question.
-
-🚀 Project Platform
-
-The chatbot was developed and deployed using Dify.
-
-Live Demo:
+### Live Demo
 https://udify.app/chat/Cy3T3G4MDHNjCtFK
 
-📂 Repository Contents
+---
 
-This repository contains documentation and supporting materials for the HR on Autopilot project.
+### 📂 Repository Contents
+- `README.md` – Project documentation
+- `HR_on_Autopilot_3MTT_Presentation.pptx` – Project presentation
+- Screenshots of the live chatbot
 
-Additional project files, screenshots, documentation, and presentation materials may be added as the project repository is developed.
+---
 
-👥 Project
+### Future Improvements
+- Expand knowledge base with more policy documents
+- Add metadata filtering by policy category
+- Implement user feedback loop (thumbs up/down)
+- Improve handling of multi-hop and ambiguous questions
+- Add automated evaluation pipeline
 
-Project: HR on Autopilot: An AI-Powered HR Policy Chatbot
+---
 
-Project Type: Generative AI / RAG Project
+### Project Info
+**Project Name**: HR on Autopilot – AI-Powered HR Company Policy Chatbot  
+**Type**: Generative AI / RAG Application  
+**Platform**: Dify  
+**Status**: Live Demo Available
 
-Platform: Dify
-
-📌 Future Improvements
-
-Potential future improvements include:
-
-Expanding the HR knowledge base.
-Improving retrieval accuracy.
-Adding more HR policy categories.
-Improving handling of ambiguous questions.
-Adding additional evaluation and testing methods.
+### How I Built It
+1. Created a new Chatflow in Dify
+2. Uploaded the HR Policy PDF into the Knowledge base
+3. Configured the Knowledge Retrieval node to use the policy document
+4. Connected it to an LLM node (Llama 3.1 8b instant)
+5. Added strict system instructions to stay grounded in the retrieved context and refuse out-of-scope questions
+6. Tested with a mix of in-scope and out-of-scope questions
+7. Published the app 
