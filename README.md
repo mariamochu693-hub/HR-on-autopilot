@@ -94,6 +94,10 @@ https://udify.app/chat/Cy3T3G4MDHNjCtFK
 6. Tested with a mix of in-scope and out-of-scope questions
 7. Published the app
 
+8. ## Model Update
+
+The project was initially developed and demonstrated using Llama 3.1 8B Instant. Following the decommissioning of this model, the deployed chatbot was updated to GPT OSS 20B. The project’s core functionality, RAG architecture, knowledge base, and HR policy focus remain unchanged.
+
 ### Team
 - Ochu Mariam (lead)
 - Verse Vitalis
