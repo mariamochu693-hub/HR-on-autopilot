@@ -22,7 +22,7 @@ A Dify-powered chatbot that:
 ### ⚙️ Tech Stack
 - **Platform**: Dify
 - **Architecture**: Retrieval-Augmented Generation (RAG)
-- **LLM**: Llama 3.1 8b instant updated to GPT oss 20b
+- **LLM**: Llama 3.1 8b instant updated to GPT-OSS-20b
 - **Knowledge Base**: HR Policy Handbook (PDF)
 - **Deployment**: Dify Cloud (Udify)
 
@@ -42,7 +42,7 @@ Accurate, Policy-Based Answer
 ### Architecture
 [User] → [Dify Chatflow]
 ├── Knowledge Retrieval Node (Bridge Policy.pdf)
-├── LLM Node - (Llama 3.1 8b instant) updated to GPT oss 20b
+├── LLM Node - (Llama 3.1 8b instant) updated to GPT-OSS-20b
 └── Response
 ---
 
@@ -59,7 +59,7 @@ Accurate, Policy-Based Answer
 ---
 
 ### Live Demo
-https://udify.app/chat/Cy3T3G4MDHNjCtFK
+(try it here)👉🏾 https://udify.app/chat/Cy3T3G4MDHNjCtFK
 
 ---
 
@@ -94,7 +94,7 @@ https://udify.app/chat/Cy3T3G4MDHNjCtFK
 6. Tested with a mix of in-scope and out-of-scope questions
 7. Published the app
 
-8. ### MODEL UPDATE 
+8. MODEL UPDATE 
 
 The project was initially developed and demonstrated using Llama 3.1 8B Instant. Following the decommissioning of this model, the deployed chatbot was updated to GPT OSS 20B. The project’s core functionality, RAG architecture, knowledge base, and HR policy focus remain unchanged.
 
